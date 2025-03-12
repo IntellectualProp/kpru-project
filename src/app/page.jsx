@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import MainMenu from "@components/MainMenu";
 export default function Home() {
   return (
     <div>
       <h1 style={{textAlign: 'center'}}>หน้าหลัก</h1>
+      <MainMenu/>
     </div>
   );
 }

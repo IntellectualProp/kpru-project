@@ -9,8 +9,8 @@
     font-size: 1.25rem; 
 }
 
-.navbar .nav:nth-child(1){
-    margin-left: 40px;
+.brand {
+    margin-right: 60px !important;
 }
 
 .navbar .nav {
@@ -24,7 +24,20 @@
 }
 
 .navbar a:hover {
-    color: #dddddd !important;
+    color: #d8d8d8 !important;
     text-decoration: underline;
 }
 
+.toggle {
+    border-color: white !important;
+    background-color: white !important;
+    border-radius: 50% !important;
+}
+
+.toggle > span {
+    width: 1.5rem !important;
+}
+
+.nav a {
+    text-align: center;
+}
