@@ -21,18 +21,18 @@ import styles from './MainMenu.module.css'
 function MainMenu() {
     // Data for cards with icons
     const cardItems = [
-        { id: 1, title: "Card Title 1", icon: FaReact, backgroundColor: "#FFDDC1"},
-        { id: 2, title: "Card Title 2", icon: FaBook, backgroundColor: "#FFD1DC"},
-        { id: 3, title: "Card Title 3", icon: FaCopyright, backgroundColor: "#C1E1FF"},
-        { id: 4, title: "Card Title 4", icon: FaTrademark, backgroundColor: "#D4F1C5"},
-        { id: 5, title: "Card Title 5", icon: FaLightbulb, backgroundColor: "#F7D9C4"},
-        { id: 6, title: "Card Title 6", icon: FaGavel, backgroundColor: "#E5CFF7"},
-        { id: 7, title: "Card Title 7", icon: FaUniversity, backgroundColor: "#FFF4B3"},
-        { id: 8, title: "Card Title 8", icon: FaGlobe, backgroundColor: "#C2F0FC"},
-        { id: 9, title: "Card Title 9", icon: FaShieldAlt, backgroundColor: "#FFE3E3"},
-        { id: 10, title: "Card Title 10", icon: FaHandshake, backgroundColor: "#D7F9DE"},
-        { id: 11, title: "Card Title 11", icon: FaFileContract, backgroundColor: "#FFEBB7"},
-        { id: 12, title: "Card Title 12", icon: FaBalanceScale, backgroundColor: "#E0BBE4"}
+        { id: 1, title: "Card Title 1", icon: FaReact, backgroundColor: "#6f6d6d"},
+        { id: 2, title: "Card Title 2", icon: FaBook, backgroundColor: "#cd2a2a"},
+        { id: 3, title: "Card Title 3", icon: FaCopyright, backgroundColor: "#cbc3c3"},
+        { id: 4, title: "Card Title 4", icon: FaTrademark, backgroundColor: "#6f1f1f"},
+        { id: 5, title: "Card Title 5", icon: FaLightbulb, backgroundColor: "#b8afaf"},
+        { id: 6, title: "Card Title 6", icon: FaGavel, backgroundColor: "#a72424"},
+        { id: 7, title: "Card Title 7", icon: FaUniversity, backgroundColor: "#6f6d6d"},
+        { id: 8, title: "Card Title 8", icon: FaGlobe, backgroundColor: "#cd2a2a"},
+        { id: 9, title: "Card Title 9", icon: FaShieldAlt, backgroundColor: "#cbc3c3"},
+        { id: 10, title: "Card Title 10", icon: FaHandshake, backgroundColor: "#6f1f1f"},
+        { id: 11, title: "Card Title 11", icon: FaFileContract, backgroundColor: "#b8afaf"},
+        { id: 12, title: "Card Title 12", icon: FaBalanceScale, backgroundColor: "#a72424"}
     ];
 
 
@@ -87,9 +87,9 @@ function MainMenu() {
                                 return (
                                     <div key={item.id} className={styles.cardWrapper}>
                                         <Card className={styles.card} style={{ backgroundColor: item.backgroundColor }}>
-                                            <IconComponent size={50} color="#61dafb" className={styles.cardIcon} />
+                                            <IconComponent color="white" className={styles.cardIcon} />
                                             <Card.Body>
-                                                <Card.Title>{item.title}</Card.Title>
+                                                <Card.Title className={styles.cardTitle}>{item.title}</Card.Title>
                                             </Card.Body>
                                         </Card>
                                     </div>
@@ -103,9 +103,9 @@ function MainMenu() {
                                 return (
                                     <div key={item.id} className={styles.cardWrapper}>
                                         <Card className={styles.card} style={{ backgroundColor: item.backgroundColor }}>
-                                            <IconComponent size={50} color="#61dafb" className={styles.cardIcon} />
+                                            <IconComponent color="white" className={styles.cardIcon} />
                                             <Card.Body>
-                                                <Card.Title>{item.title}</Card.Title>
+                                                <Card.Title className={styles.cardTitle}>{item.title}</Card.Title>
                                             </Card.Body>
                                         </Card>
                                     </div>

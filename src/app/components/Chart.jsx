@@ -1,4 +1,3 @@
-// components/BarCharts.jsx
 'use client';
 
 import React from 'react';
@@ -12,6 +11,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import styles from './Chart.module.css'
 
 // Register Chart.js components
 ChartJS.register(
@@ -24,36 +24,64 @@ ChartJS.register(
 );
 
 export default function BarCharts() {
-  // Data for the first bar chart
-  const salesData = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+  // ข้อมูลสำหรับกราฟแรก - ข้อมูลทรัพย์สินทางปัญญาแยกตามคณะ
+  const intellectualPropertyData = {
+    labels: ['คณะครุศาสตร์', 'คณะวิศวกรรม', 'คณะวิทยาการจัดการ', 'คณะพยาบาลศาสตร์'],
     datasets: [
       {
-        label: 'Monthly Sales',
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+        label: 'ลิขสิทธิ์',
+        data: [40, 30, 10, 20],
+        backgroundColor: 'rgba(53, 162, 235, 0.7)',
         borderColor: 'rgba(53, 162, 235, 1)',
         borderWidth: 1,
       },
-    ],
-  };
-
-  // Data for the second bar chart
-  const expensesData = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-    datasets: [
       {
-        label: 'Monthly Expenses',
-        data: [8, 12, 6, 9, 4, 7],
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        label: 'สิทธิบัตร',
+        data: [20, 30, 40, 20],
+        backgroundColor: 'rgba(255, 99, 132, 0.7)',
         borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1,
+      },
+      {
+        label: 'อนุสิทธิบัตร',
+        data: [20, 10, 10, 10],
+        backgroundColor: 'rgba(75, 192, 192, 0.7)',
+        borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 1,
       },
     ],
   };
 
-  // Options for both charts
-  const options = {
+  // ข้อมูลสำหรับกราฟที่สอง - ข้อมูลผลงานตามปีแยกตามคณะ
+  const yearlyPerformanceData = {
+    labels: ['คณะครุศาสตร์', 'คณะวิศวกรรม', 'คณะวิทยาการจัดการ', 'คณะพยาบาลศาสตร์'],
+    datasets: [
+      {
+        label: 'ปี 2565',
+        data: [20, 15, 23, 40],
+        backgroundColor: 'rgba(153, 102, 255, 0.7)',
+        borderColor: 'rgba(153, 102, 255, 1)',
+        borderWidth: 1,
+      },
+      {
+        label: 'ปี 2566',
+        data: [30, 25, 27, 40],
+        backgroundColor: 'rgba(255, 159, 64, 0.7)',
+        borderColor: 'rgba(255, 159, 64, 1)',
+        borderWidth: 1,
+      },
+      {
+        label: 'ปี 2567',
+        data: [40, 30, 40, 42],
+        backgroundColor: 'rgba(255, 205, 86, 0.7)',
+        borderColor: 'rgba(255, 205, 86, 1)',
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  // ตัวเลือกสำหรับกราฟแรก
+  const intellectualPropertyOptions = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -62,78 +90,78 @@ export default function BarCharts() {
       },
       title: {
         display: true,
-        text: 'Monthly Performance',
+        text: 'ข้อมูลทรัพย์สินทางปัญญาแยกตามคณะ',
+        font: {
+          size: 16,
+        },
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          font: {
+            size: 12,
+          },
+        },
+      },
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'จำนวน',
+        },
+      },
+    },
+  };
+
+  // ตัวเลือกสำหรับกราฟที่สอง
+  const yearlyPerformanceOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'ผลงานตามปีการศึกษาแยกตามคณะ',
+        font: {
+          size: 16,
+        },
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          font: {
+            size: 12,
+          },
+        },
+      },
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'จำนวน',
+        },
       },
     },
   };
 
   return (
-    <div className="charts-container">
-      <div className="chart-wrapper left-chart">
-        <h2 className="chart-title">Sales Overview</h2>
-        <div className="chart-inner">
-          <Bar options={options} data={salesData} />
+    <div className={styles.container}>
+      <div className={`${styles.chartWrapper} ${styles.leftChart}`}>
+        <h2 className={styles.chartTitle}>ข้อมูลทรัพย์สินทางปัญญา</h2>
+        <div className={styles.chartInner}>
+          <Bar options={intellectualPropertyOptions} data={intellectualPropertyData} />
         </div>
       </div>
-      <div className="chart-wrapper right-chart">
-        <h2 className="chart-title">Expenses Overview</h2>
-        <div className="chart-inner">
-          <Bar options={options} data={expensesData} />
+      <div className={`${styles.chartWrapper} ${styles.rightChart}`}>
+        <h2 className={styles.chartTitle}>ผลงานตามปีการศึกษา</h2>
+        <div className={styles.chartInner}>
+          <Bar options={yearlyPerformanceOptions} data={yearlyPerformanceData} />
         </div>
       </div>
-      
-      <style jsx>{`
-        .charts-container {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          gap: 20px;
-        }
-        
-        .chart-wrapper {
-          background-color: white;
-          border-radius: 8px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          padding: 16px;
-          width: 100%;
-        }
-        
-        .chart-title {
-          font-size: 1.25rem;
-          font-weight: bold;
-          margin-bottom: 1rem;
-        }
-        
-        .chart-inner {
-          height: 300px;
-          position: relative;
-        }
-        
-        /* Media query for responsive layout */
-        @media (min-width: 768px) {
-          .charts-container {
-            flex-direction: row;
-            align-items: flex-start;
-          }
-          
-          .left-chart {
-            width: 50%;
-            order: 1; /* Ensures left chart is on the left */
-          }
-          
-          .right-chart {
-            width: 50%;
-            order: 2; /* Ensures right chart is on the right */
-          }
-        }
-        
-        /* Additional responsiveness for smaller screens */
-        @media (max-width: 480px) {
-          .chart-inner {
-            height: 250px;
-          }
-        }
-      `}</style>
     </div>
   );
 }

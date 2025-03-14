@@ -28,7 +28,7 @@
   
   .imageContainer {
     position: relative;
-    width: 10   0%;
+    width: 10 0%;
     height: 100%;
     /* border-radius: 8px; */
     overflow: hidden;
@@ -37,7 +37,7 @@
   
   .title {
     font-size: 2rem;
-    color: #333;
+    color: black;
   }
 
   /* Two rows layout */
@@ -74,8 +74,15 @@
   
   .cardIcon {
     margin: 10px auto 5px auto;
+    width: 45px;
+    height: 45px;
   }
-  
+
+  .cardTitle{
+    font-size: 1.2rem;
+    color: white;
+  }
+
   /* Add these styles to your existing MainMenu.module.css file */
 
 .paginationControls {
@@ -132,22 +139,33 @@
     }
     
     .title {
-      font-size: 1.75rem;
+      font-size: 26px;
     }
     
     .card {
       padding: 15px;
+    }
+
+    .cardIcon {
+      width: 40px;
+      height: 40px;
     }
   }
   
   /* Small tablets: Maintain left image but adjust sizes */
   @media (max-width: 768px) {
     .horizontalLayout {
-      min-height: 350px;
+      flex-direction: column;
+      min-height: auto;
     }
-    
+
+    .imageSection {
+      flex: 0 0 125px; /* Fixed height on mobile */
+      width: 100%;
+    }
+
     .title {
-      font-size: 1.5rem;
+      font-size: 22px;
       margin-bottom: 20px;
     }
     
@@ -162,6 +180,15 @@
     .card {
       padding: 10px;
     }
+
+    .cardIcon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .cardTitle{
+      font-size: 14px;
+    }
   }
   
   /* Mobile landscape: Switch to vertical layout */
@@ -174,16 +201,19 @@
     .imageSection {
       flex: 0 0 175px; /* Fixed height on mobile */
       width: 100%;
-      margin-bottom: 20px;
     }
     
     .title {
-      text-align: center;
+      font-size: 18px;
     }
     
     /* Keep 2x3 grid structure */
     .cardWrapper {
       min-height: 120px;
+    }
+
+    .cardTitle{
+      font-size: 12px;
     }
   }
   
