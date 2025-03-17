@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body style={{backgroundColor: '#f4e1d1'}}>
         <MyNavbar />
         {children}
       </body>
