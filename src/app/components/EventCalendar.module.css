@@ -1,0 +1,81 @@
+.eventCalendar {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.calendarGrid {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.calendarDays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: 1px solid #dee2e6;
+    background-color: white;
+}
+
+.calendarDates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: minmax(80px, auto);
+}
+
+.calendarDate {
+    padding: 10px;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    cursor: pointer;
+    min-height: 80px;
+}
+
+.calendarDate:hover {
+    background-color: #f8f9fa;
+}
+
+.calendarDate.textMuted {
+    color: #adb5bd;
+    background-color: #f9f9f9;
+}
+
+.dateNumber {
+    font-weight: 500;
+}
+
+.hasEvent {
+    position: relative;
+}
+
+.eventDot {
+    width: 6px;
+    height: 6px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+
+.today {
+    background-color: #e8f4ff;
+}
+
+.today .dateNumber {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.selectedDateEvents {
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.noEvents {
+    font-style: italic;
+    color: #6c757d;
+}

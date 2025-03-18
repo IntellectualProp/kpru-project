@@ -15,7 +15,7 @@ function MyNavbar() {
                         <Nav.Link href="/download-page">ดาวน์โหลด</Nav.Link>
                         <Nav.Link href="/patent-search-page">Patent Search</Nav.Link>
                         <Nav.Link href="#link">ค้นหา/สถิติ</Nav.Link>
-                        <Nav.Link href="#link">ข่าวสาร/กิจกรรม</Nav.Link>
+                        <Nav.Link href="/news-events-page">ข่าวสาร/กิจกรรม</Nav.Link>
                         <Nav.Link href="#link">ตรวจสอบสถานะคำขอ</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
