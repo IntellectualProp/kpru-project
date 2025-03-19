@@ -1,6 +1,6 @@
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import MyNavbar from "@components/Navbar";
+import MyNavbar from "@components/componentsHomePage/Navbar";
 
 export const metadata = {
   title: "Create Next App",
