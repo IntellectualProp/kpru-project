@@ -17,3 +17,147 @@
 body {
   font-family: "Kanit", sans-serif !important;
 }
+
+/* เพิ่ม CSS นี้ในไฟล์ globals.css หรือสร้าง module CSS ใหม่ */
+.customImage {
+  width: 100%;
+  max-width: 500px;
+}
+.assessment {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px !important;
+  display: flex;
+}
+
+.assessment-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 50px;
+  background-color: #f5f7fa;
+}
+
+.assessment-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #69470D;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.assessment-button-container {
+  position: relative;
+  display: flex;
+  justify-content: center !important;
+}
+
+.assessment-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.assessment-button {
+  background-color: #FFCC3E;
+  color: #69470D;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 48px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px #ad8a2a;
+  margin-top: 10px;
+}
+
+.assessment-button:hover {
+  background-color: #cfa738;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #e0b53e;
+}
+
+.assessment-button:active {
+  transform: translateY(0);
+}
+
+.click-icon-wrapper {
+  position: absolute;
+  bottom: -8%;
+  left: 63%;
+  transform: translate(-50%, 50%);
+  pointer-events: none; /* ป้องกันไม่ให้ไอคอนรับการคลิก */
+}
+
+.click-icon {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .click-icon-wrapper {
+    display: none;
+  }
+  .assessment-title {
+    font-size: 1.7rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .assessment-title {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* Media Queries สำหรับ Responsive */
+@media (max-width: 768px) {
+  .assessment {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+  }
+  
+  .assessment-content {
+    width: 60%;
+    text-align: left;
+  }
+  
+  .assessment-button-container {
+    justify-content: flex-start;
+  }
+
+  .assessment-title {
+    font-size: 1.75rem;
+  }
+  .assessment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .assessment-image {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .assessment {
+    padding: 16px;
+  }
+  
+  .assessment-title {
+    font-size: 1.25rem;
+  }
+  
+  .assessment-button {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+  .assessment-section {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
