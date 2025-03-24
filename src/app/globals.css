@@ -23,7 +23,7 @@ body {
   width: 100%;
   max-width: 500px;
 }
-.assessment {
+.assessment, .triup-act {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -97,12 +97,83 @@ body {
   display: block;
 }
 
+/*Triup ACT*/
+.triup-act-section {
+  width: 100%;
+  padding: 50px;
+  background-color: #f5f7fa;
+}
+
+.triup-act-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.triup-act-title p{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #69470D;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.triup-act-button {
+  background-color: #FFCC3E;
+  color: #69470D;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 48px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px #ad8a2a;
+  margin-top: 10px;
+}
+
+.triup-act-button:hover {
+  background-color: #cfa738;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #e0b53e;
+}
+
+.triup-act-button:active {
+  transform: translateY(0);
+}
+
+.triup-act-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 0px 120px
+}
+
+.triup-act-image img{
+  width: 100%;
+  max-width: 350px;
+}
 @media (max-width: 1200px) {
   .click-icon-wrapper {
     display: none;
   }
-  .assessment-title {
+  .assessment-title, .triup-act-title p{
     font-size: 1.7rem !important;
+  }
+
+  .triup-act-title p{
+    font-size: 22px !important;
+  }
+
+  .triup-act-image {
+    padding: 0px 80px
+  }
+
+  .triup-act-image img{
+    width: 100%;
+    max-width: 300px;
   }
 }
 
@@ -110,11 +181,22 @@ body {
   .assessment-title {
     font-size: 1.4rem !important;
   }
+  .triup-act-title p{
+    font-size: 20px !important;
+  }
+  .triup-act-image {
+    padding: 0px 60px
+  }
+
+  .triup-act-image img{
+    width: 100%;
+    max-width: 250px;
+  }
 }
 
 /* Media Queries สำหรับ Responsive */
 @media (max-width: 768px) {
-  .assessment {
+  .assessment, .triup-act {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -133,6 +215,11 @@ body {
   .assessment-title {
     font-size: 1.75rem;
   }
+
+  .triup-act-title p{
+    font-size: 20px !important;
+  }
+  
   .assessment-section {
     display: flex;
     flex-direction: column;
@@ -141,15 +228,28 @@ body {
   .assessment-image {
     margin-bottom: 30px;
   }
+
+  .triup-act-image {
+    margin-top: 30px;
+    padding: 0px 0px
+  }
+
+  .triup-act-image img{
+    width: 100%;
+    max-width: 190px;
+  }
 }
 
 @media (max-width: 480px) {
-  .assessment {
+  .assessment, .triup-act{
     padding: 16px;
   }
   
   .assessment-title {
     font-size: 1.25rem;
+  }
+  .triup-act-title p{
+    font-size: 18px !important;
   }
   
   .assessment-button {
@@ -159,5 +259,9 @@ body {
   .assessment-section {
     display: flex;
     flex-direction: column !important;
+  }
+  .triup-act-image img{
+    width: 100%;
+    max-width: 100px;
   }
 }
