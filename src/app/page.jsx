@@ -59,6 +59,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/*Address*/}
+      <section className="address">
+        <div className="address-section">
+          <div className="address-title">
+            <p>ข้อมูลติดต่อ</p>
+            <p>งานทรัพย์สินทางปัญญา สถาบันวิจัยและพัฒนา มหาวิทยาลัยราชภัฏกำแพงเพชร เลขที่ 69 หมู่ 1 ต.นครชุม อ.เมือง จ.กำแพงเพชร 62000</p>
+            <p>website : </p>
+            <p>โทรศัพท์ 055 746 555 ต่อ 1761</p>
+          </div>
+          <div className="address-image">
+          <iframe
+            src="https://maps.google.com/maps?q=16.455084404053846,99.51404600749457&hl=th&z=15&output=embed"
+            allowFullScreen=""
+            loading="lazy"
+            className="address-map"
+          ></iframe>
+          </div>
+        </div>
+      </section>
       <footer style={{ marginBottom: '150px' }}></footer>
     </div>
   );
