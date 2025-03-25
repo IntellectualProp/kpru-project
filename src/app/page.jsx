@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import MainMenu from "@components/componentsHomePage/MainMenu";
 import Chart from "@components/componentsHomePage/Chart";
 import Slider from "@components/componentsHomePage/Slider";
@@ -10,7 +8,6 @@ import "./globals.css";
 export default function Home() {
   return (
     <div>
-      {/* <h1 style={{textAlign: 'center'}}>หน้าหลัก</h1> */}
       <Slider />
       <MainMenu />
       <Chart />
@@ -20,7 +17,7 @@ export default function Home() {
       <section className="assessment">
         <div className="assessment-section">
           <div className="assessment-image">
-            <img src="/images/SAP-Assessment.png" alt="Assessment Image" className="customImage"></img>
+            <img src="/images/SAP-Assessment.png" alt="SAP-Assessment" className="customImage"></img>
           </div>
           <div className="assessment-content">
             <p className="assessment-title">ร่วมประเมินแบบสอบถามความพึงพอใจของผู้ใช้บริการ</p>
@@ -28,9 +25,9 @@ export default function Home() {
               <button className="assessment-button">
                 แบบประเมิน
               </button>
-              <div className="click-icon-wrapper">
-                <img src="/images/click.png" className="click-icon"></img>
-              </div>
+              {/* <div className="click-icon-wrapper">
+                <img src="/images/click.png" alt="click image" className="click-icon"></img>
+              </div> */}
             </div>
           </div>
         </div>
@@ -54,8 +51,8 @@ export default function Home() {
             </div>
           </div>
           <div className="triup-act-image">
-            <img src="/images/TRIUP_Act1.png" alt="Assessment Image"></img>
-            <img src="/images/TRIUP_Act2.png" alt="Assessment Image"></img>
+            <img src="/images/TRIUP_Act1.png" alt="TRIUP_Act1"></img>
+            <img src="/images/TRIUP_Act2.png" alt="TRIUP_Act2"></img>
           </div>
         </div>
       </section>
