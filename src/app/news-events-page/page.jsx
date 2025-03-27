@@ -26,7 +26,7 @@ function NewsEventPage() {
 
   return (
     <div>
-      <h1 style={{textAlign: 'center'}}>Event Page</h1>
+      <h1 style={{textAlign: 'center'}}>ปฏิทินกิจกรรม</h1>
       <EventCalendar events={eventsSample} />
     </div>
   )

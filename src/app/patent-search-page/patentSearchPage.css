@@ -1,0 +1,21 @@
+.patent-search {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.patent-search-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px;
+}
+
+.patent-search-section .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #69470D;
+}
