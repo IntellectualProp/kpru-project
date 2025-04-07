@@ -15,9 +15,6 @@ export default function PatentSearchPage() {
             <SearchInfo />
         </div>
       </section>
-
-
-      <footer style={{ marginBottom: '150px' }}></footer>
     </div>
   );
 }
