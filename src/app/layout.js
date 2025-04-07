@@ -1,6 +1,6 @@
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import MyNavbar from "@components/componentsHomePage/Navbar";
+import MyNavbar from "@components/Navbar";
 import Footer from "@components/Footer";
 export const metadata = {
   title: "Create Next App",

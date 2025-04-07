@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './SearchInfo.module.css'
 // import "./SearchInfo.css";
 
 function Footer() {

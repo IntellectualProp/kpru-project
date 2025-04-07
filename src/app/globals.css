@@ -23,6 +23,51 @@ body {
   padding: 0;
 }
 
+/* Navbar.css */
+.custom-navbar {
+  background-color: #916B48 !important;
+  color: white !important;
+  margin: 20px auto 20px auto;
+  padding: 20px 20px !important;
+  width: 80%;
+  border-radius: 60px;
+  text-align: center;
+  font-size: 1.25rem; 
+}
+
+.custom-brand {
+  margin-right: 60px !important;
+}
+
+.custom-navbar .custom-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-navbar a {
+  color: white !important;
+}
+
+.custom-navbar a:hover {
+  color: #d8d8d8 !important;
+  text-decoration: underline;
+}
+
+.custom-toggle {
+  border-color: white !important;
+  background-color: white !important;
+  border-radius: 50% !important;
+}
+
+.custom-toggle > span {
+  width: 1.5rem !important;
+}
+
+.custom-nav a {
+  text-align: center;
+}
+
 /* Common Styles */
 .customImage {
   width: 100%;
