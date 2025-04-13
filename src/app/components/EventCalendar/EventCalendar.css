@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding: 20px !important;
 }
+
 .btn {
   background-color: #916B48;
   color: white;
@@ -329,5 +330,20 @@
   
   .event-description {
     font-size: 13px;
+  }
+
+  .calendar-header {
+    margin-bottom: 0px;
+  }
+  .custon-calendar-header {
+    display: flex;
+    flex-direction: column;
+  }
+  .custom-button-group { 
+    margin-top: 15px;
+  }
+
+  button {
+    font-size: 12px !important;
   }
 }

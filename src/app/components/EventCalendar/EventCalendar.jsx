@@ -150,7 +150,7 @@ const EventCalendar = ({ events = [] }) => {
               <h2 className="current-month mb-0 ms-2 d-flex align-items-center">
                 {formatMonthYear(currentDate)}
               </h2>
-              <div className="d-flex">
+              <div className="d-flex custom-button-group">
                 <button className="btn me-2" onClick={goToToday}>
                   วันนี้
                 </button>

@@ -30,7 +30,7 @@ function NewsEventPage() {
     <div>
       <Slider />
       <div className='event-section'>
-        <h1 style={{textAlign: 'center'}}>ปฏิทินกิจกรรม</h1>
+        <h2 className='title'>ปฏิทินกิจกรรม</h2>
         <EventCalendar events={eventsSample} />
       </div>
     </div>
