@@ -1,6 +1,8 @@
-import React from 'react'
-import EventCalendar from "@components/componentsHomePage/EventCalendar";
-
+"use client";
+import React, { useState, useEffect } from 'react';
+import Slider from "@components/componentsHomePage/Slider";
+import EventCalendar from "@components/EventCalendar/EventCalendar";
+import "./newsEventsPage.css";
 function NewsEventPage() {
 
   const eventsSample = [
@@ -26,8 +28,11 @@ function NewsEventPage() {
 
   return (
     <div>
-      <h1 style={{textAlign: 'center'}}>ปฏิทินกิจกรรม</h1>
-      <EventCalendar events={eventsSample} />
+      <Slider />
+      <div className='event-section'>
+        <h1 style={{textAlign: 'center'}}>ปฏิทินกิจกรรม</h1>
+        <EventCalendar events={eventsSample} />
+      </div>
     </div>
   )
 }

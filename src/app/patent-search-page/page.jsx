@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Slider from "@components/componentsHomePage/Slider";
-import SearchInfo from "@components/SearchInfo";
+import SearchInfo from "@components/SearchInfo/SearchInfo";
 import "./patentSearchPage.css";
 
 export default function PatentSearchPage() {

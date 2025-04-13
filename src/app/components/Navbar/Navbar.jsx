@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import styles from './MyNavbar.module.css';
+import styles from './Navbar.module.css';
 
 function MyNavbar() {
     const [scrolled, setScrolled] = useState(false);

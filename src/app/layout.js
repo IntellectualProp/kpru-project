@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
-import MyNavbar from "@components/Navbar";
-import Footer from "@components/Footer";
+import MyNavbar from "@components/Navbar/Navbar";
+import Footer from "@components/Footer/Footer";
 export const metadata = {
   title: "KPRU Innovation",
   description: "KPRU Innovation",
