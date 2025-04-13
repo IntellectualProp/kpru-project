@@ -138,6 +138,7 @@ function SearchInfo({
           </div>
         )}
       </div>
+      <div className='end-line'></div>
     </div>
   );
 }

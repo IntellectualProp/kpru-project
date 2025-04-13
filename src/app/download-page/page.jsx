@@ -17,11 +17,42 @@ export default function DownloadPage() {
     { id: 1, title: "สิทธิบัตรการประดิษฐ์ 1", createTime: "02 ธันวาคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
     { id: 2, title: "สิทธิบัตรการประดิษฐ์ 2", createTime: "05 มกราคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
     { id: 3, title: "สิทธิบัตรการออกแบบ 1", createTime: "10 กุมภาพันธ์ 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการออกแบบนี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
-    // Add more patent items as needed
+  ]);
+  const [patentData1, setPatentData1] = useState([
+    { id: 1, title: "สิทธิบัตรการประดิษฐ์ 1111", createTime: "02 ธันวาคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 2, title: "สิทธิบัตรการประดิษฐ์ 2222", createTime: "05 มกราคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 3, title: "สิทธิบัตรการออกแบบ 1111", createTime: "10 กุมภาพันธ์ 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการออกแบบนี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 1, title: "สิทธิบัตรการประดิษฐ์ 1", createTime: "02 ธันวาคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 2, title: "สิทธิบัตรการประดิษฐ์ 2", createTime: "05 มกราคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 3, title: "สิทธิบัตรการออกแบบ 1", createTime: "10 กุมภาพันธ์ 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการออกแบบนี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 1, title: "สิทธิบัตรการประดิษฐ์ 1", createTime: "02 ธันวาคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 2, title: "สิทธิบัตรการประดิษฐ์ 2", createTime: "05 มกราคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 3, title: "สิทธิบัตรการออกแบบ 1", createTime: "10 กุมภาพันธ์ 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการออกแบบนี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+  ]);
+  const [patentData2, setPatentData2] = useState([
+    { id: 1, title: "สิทธิบัตรการประดิษฐ์ 1", createTime: "02 ธันวาคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 2, title: "สิทธิบัตรการประดิษฐ์ 2", createTime: "05 มกราคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 3, title: "สิทธิบัตรการออกแบบ 1", createTime: "10 กุมภาพันธ์ 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการออกแบบนี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 1, title: "สิทธิบัตรการประดิษฐ์ 1", createTime: "02 ธันวาคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 2, title: "สิทธิบัตรการประดิษฐ์ 2", createTime: "05 มกราคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 3, title: "สิทธิบัตรการออกแบบ 1", createTime: "10 กุมภาพันธ์ 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการออกแบบนี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 1, title: "สิทธิบัตรการประดิษฐ์ 1", createTime: "02 ธันวาคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 2, title: "สิทธิบัตรการประดิษฐ์ 2", createTime: "05 มกราคม 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการประดิษฐ์นี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
+    { id: 3, title: "สิทธิบัตรการออกแบบ 1", createTime: "10 กุมภาพันธ์ 67", description: "รายละเอียดเกี่ยวกับสิทธิบัตรการออกแบบนี้และข้อมูลสำคัญ", images: "/images/info.jpg" },
   ]);
 
   // Optional: Function to handle when a card is clicked
   const handlePatentClick = (patent) => {
+    console.log("Patent clicked:", patent);
+    // You could redirect to a detail page, for example:
+    // router.push(`/patents/${patent.id}`);
+  };
+  const handlePatentClick1 = (patent) => {
+    console.log("Patent clicked:", patent);
+    // You could redirect to a detail page, for example:
+    // router.push(`/patents/${patent.id}`);
+  };
+  const handlePatentClick2 = (patent) => {
     console.log("Patent clicked:", patent);
     // You could redirect to a detail page, for example:
     // router.push(`/patents/${patent.id}`);
@@ -35,23 +66,23 @@ export default function DownloadPage() {
             <SearchInfo 
               cardItems={patentData}
               title="เอกสารที่เกี่ยวข้อง"
-              cardsPerPageDefault={6}
+              cardsPerPageDefault={3}
               readMoreText="อ่านรายละเอียด"
               onCardClick={handlePatentClick}
             />
             <SearchInfo 
-              cardItems={patentData}
+              cardItems={patentData1}
               title="แบบฟอร์มต่างๆ"
-              cardsPerPageDefault={6}
+              cardsPerPageDefault={3}
               readMoreText="อ่านรายละเอียด"
-              onCardClick={handlePatentClick}
+              onCardClick={handlePatentClick1}
             />
             <SearchInfo 
-              cardItems={patentData}
+              cardItems={patentData2}
               title="ตัวอย่างแบบฟอร์ม"
-              cardsPerPageDefault={6}
+              cardsPerPageDefault={3}
               readMoreText="อ่านรายละเอียด"
-              onCardClick={handlePatentClick}
+              onCardClick={handlePatentClick2}
             />
         </div>
       </section>

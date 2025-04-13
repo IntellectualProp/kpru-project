@@ -1,5 +1,4 @@
 import React from 'react'
-// import "./SearchInfo.css";
 
 function Footer() {
     return (
@@ -14,7 +13,7 @@ function Footer() {
                             <div className="footer-contact-details">
                                 <div className="footer-contact-item">
                                     <div className="footer-icon">📱</div>
-                                    <p>โท   รศัพท์: 055 746 555 ต่อ 1761</p>
+                                    <p>โทรศัพท์: 055 746 555 ต่อ 1761</p>
                                 </div>
                                 <div className="footer-contact-item">
                                     <div className="footer-icon">🌐</div>

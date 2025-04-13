@@ -35,7 +35,7 @@ export default function PatentSearchPage() {
             <SearchInfo 
               cardItems={patentData}
               title="สืบค้นข้อมูลสิทธิบัตร"
-              cardsPerPageDefault={6}
+              cardsPerPageDefault={3}
               readMoreText="อ่านรายละเอียด"
               onCardClick={handlePatentClick}
             />

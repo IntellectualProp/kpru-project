@@ -17,7 +17,7 @@ export default function Home() {
       <section className="assessment">
         <div className="assessment-section">
           <div className="assessment-image">
-            <img src="/images/SAP-Assessment.png" alt="SAP-Assessment" className="customImage"></img>
+            <img src="/images/SAP-Assessment.png" alt="SAP-Assessment"></img>
           </div>
           <div className="assessment-content">
             <h2 className="assessment-title">ร่วมประเมินแบบสอบถามความพึงพอใจของผู้ใช้บริการ</h2>

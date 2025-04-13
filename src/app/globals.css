@@ -14,6 +14,12 @@
   font-display: swap;
 }
 
+*, body, html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Kanit", sans-serif !important;
   color: #333;
@@ -28,7 +34,7 @@ body {
   background-color: #916B48 !important;
   color: white !important;
   margin: 20px auto 20px auto;
-  padding: 20px 20px !important;
+  padding: 0px 0px !important;
   width: 80%;
   border-radius: 60px;
   text-align: center;
@@ -69,15 +75,13 @@ body {
 }
 
 /* Common Styles */
-.customImage {
+.assessment-image img {
   width: 100%;
   max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-.customImage:hover {
+.assessment-image img:hover {
   transform: translateY(-5px);
 }
 
@@ -100,6 +104,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   position: relative;
+  justify-content: space-between;
 }
 
 .assessment-section::before {
@@ -225,7 +230,7 @@ body {
 .triup-act-section {
   width: 100%;
   padding: 60px 50px;
-  background-color: #f5f7fa;
+  background-color: #F5F7FA;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   position: relative;
@@ -331,14 +336,12 @@ body {
 .triup-act-image img {
   width: 100%;
   max-width: 325px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition: transform 0.3s ease;
+
 }
 
 .triup-act-image img:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
 }
 
 /* Footer (Previously Address Section) */

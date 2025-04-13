@@ -1,7 +1,7 @@
 /* SearchInfo.css */
 :root {
-    --primary-color: #3b82f6;
-    --primary-hover: #2563eb;
+    --primary-color: #a07853;
+    --primary-hover: #916B48;
     --text-primary: #1f2937;
     --text-secondary: #6b7280;
     --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -13,9 +13,13 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 1rem;
   }
   
+  .section-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
   .content-section {
     width: 100%;
   }
@@ -164,6 +168,7 @@
     border: none;
     cursor: pointer;
     transition: background-color var(--transition-time);
+    border-radius: 50%;
   }
   
   .pagination-button:hover:not(.disabled) {
@@ -174,4 +179,13 @@
     background-color: #e5e7eb;
     color: #9ca3af;
     cursor: not-allowed;
+  }
+
+  .end-line {
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: #c9c9c9;
+    margin: 2rem 0;
+    border-radius: 40%;
   }
