@@ -16,8 +16,7 @@ function Slider() {
           throw new Error("Failed to fetch data");
         }
         const data = await response.json();
-        const filteredSlides = data.filter((slide) => slide.tag === 'slider_homepage');
-        setSlides(filteredSlides); // Assuming the API returns an array of slides
+        setSlides(data); // Assuming the API returns an array of slides
         setLoading(false);
       } catch (err) {
         setError(err.message);
