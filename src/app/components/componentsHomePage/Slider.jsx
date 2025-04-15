@@ -11,12 +11,17 @@ function Slider() {
   useEffect(() => {
     const fetchSlides = async () => {
       try {
-        const response = await fetch(config.backend_prod_url);
+        const response = await fetch(config.backend_prod_url, {
+          method: "GET",
+          credentials: "include", // ✅ Important for session-based auth or CSRF cookies
+        });
+
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
+
         const data = await response.json();
-        setSlides(data); // Assuming the API returns an array of slides
+        setSlides(data); // ✅ Assuming the API returns an array of slides
         setLoading(false);
       } catch (err) {
         setError(err.message);
