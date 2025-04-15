@@ -11,7 +11,7 @@ function Slider() {
   useEffect(() => {
     const fetchSlides = async () => {
       try {
-        const response = await fetch(config.backend_prod_url, {
+        const response = await fetch(config.backend_prod_url + '/slider_image', {
           method: "GET",
           credentials: "include", // ✅ Important for session-based auth or CSRF cookies
         });
