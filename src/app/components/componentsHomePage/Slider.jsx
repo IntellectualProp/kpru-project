@@ -11,7 +11,7 @@ function Slider() {
   useEffect(() => {
     const fetchSlides = async () => {
       try {
-        const response = await fetch(config.backend_url);
+        const response = await fetch(config.backend_prod_url);
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
