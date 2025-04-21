@@ -528,6 +528,130 @@ body {
   margin-bottom: 10px;
 }
 
+
+body.loading {
+  overflow: hidden;
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 9999;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader span {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.dot-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background-color: #916B48;
+  display: inline-block;
+  opacity: 0.6;
+  animation: dotPulse 1.4s infinite ease-in-out both;
+}
+
+.dot1 {
+  animation-delay: -0.32s;
+}
+
+.dot2 {
+  animation-delay: -0.24s;
+}
+
+.dot3 {
+  animation-delay: -0.16s;
+}
+
+.dot4 {
+  animation-delay: -0.08s;
+}
+
+.dot5 {
+  animation-delay: 0s;
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% { 
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+  40% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.content-loader {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.content-loader-shimmer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 1.5s infinite;
+  position: absolute;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.content-wrapper {
+  transition: opacity 0.5s ease;
+}
+
+.content-wrapper.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content-wrapper.fade-in {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Responsive Media Queries */
 @media screen and (max-width: 1200px) {
   .click-icon-wrapper {
@@ -572,7 +696,7 @@ body {
   }
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .assessment-section, .triup-act-section {
     padding: 40px 30px;
   }
@@ -598,7 +722,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .assessment, .triup-act, .address {
     padding: 15px !important;
   }
@@ -658,6 +782,16 @@ body {
   
   .footer-contact-details {
     padding: 15px;
+  }
+
+  .dot {
+    width: 14px;
+    height: 14px;
+    margin: 0 6px;
+  }
+  
+  .loader span {
+    font-size: 14px;
   }
 }
 
@@ -764,5 +898,15 @@ body {
   
   .footer-social {
     justify-content: center;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
+  
+  .loader span {
+    font-size: 12px;
   }
 }
