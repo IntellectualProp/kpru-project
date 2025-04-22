@@ -35,7 +35,6 @@ function MainMenu() {
         { id: 12, title: "Card Title 12", icon: FaBalanceScale, backgroundColor: "#a72424"}
     ];
 
-
     // Pagination state
     const [currentPage, setCurrentPage] = useState(1);
     const cardsPerPage = 6;
@@ -45,10 +44,6 @@ function MainMenu() {
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
     const currentCards = cardItems.slice(indexOfFirstCard, indexOfLastCard);
-
-    // First row and second row for current page
-    const firstRow = currentCards.slice(0, 3);
-    const secondRow = currentCards.slice(3, 6);
 
     // Handle page navigation
     const goToNextPage = () => {
@@ -80,38 +75,20 @@ function MainMenu() {
                 <div className={styles.contentSection}>
                     <h1 className={styles.title}>IP Knowledge ความรู้ด้านทรัพย์สินทางปัญญา</h1>
 
-                    <div className={styles.twoRowsLayout}>
-                        <div className={styles.cardRow}>
-                            {firstRow.map((item) => {
-                                const IconComponent = item.icon;
-                                return (
-                                    <div key={item.id} className={styles.cardWrapper}>
-                                        <Card className={styles.card} style={{ backgroundColor: item.backgroundColor }}>
-                                            <IconComponent color="white" className={styles.cardIcon} />
-                                            <Card.Body>
-                                                <Card.Title className={styles.cardTitle}>{item.title}</Card.Title>
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                );
-                            })}
-                        </div>
-
-                        <div className={styles.cardRow}>
-                            {secondRow.map((item) => {
-                                const IconComponent = item.icon;
-                                return (
-                                    <div key={item.id} className={styles.cardWrapper}>
-                                        <Card className={styles.card} style={{ backgroundColor: item.backgroundColor }}>
-                                            <IconComponent color="white" className={styles.cardIcon} />
-                                            <Card.Body>
-                                                <Card.Title className={styles.cardTitle}>{item.title}</Card.Title>
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
-                                );
-                            })}
-                        </div>
+                    <div className={styles.cardsGrid}>
+                        {currentCards.map((item) => {
+                            const IconComponent = item.icon;
+                            return (
+                                <div key={item.id} className={styles.cardWrapper}>
+                                    <Card className={styles.card} style={{ backgroundColor: item.backgroundColor }}>
+                                        <IconComponent color="white" className={styles.cardIcon} />
+                                        <Card.Body>
+                                            <Card.Title className={styles.cardTitle}>{item.title}</Card.Title>
+                                        </Card.Body>
+                                    </Card>
+                                </div>
+                            );
+                        })}
                     </div>
 
                     {/* Pagination Controls */}
