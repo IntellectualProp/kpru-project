@@ -104,7 +104,7 @@ function MyNavbar() {
                             </Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link href="#" className={styles.navLink} onClick={handleNavItemClick}>
+                            <Link href="/search-statistics" className={styles.navLink} onClick={handleNavItemClick}>
                             ค้นหา/สถิติ
                             </Link>
                         </li>
