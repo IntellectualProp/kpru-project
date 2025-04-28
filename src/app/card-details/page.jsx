@@ -6,7 +6,7 @@ import {
     FaReact,
     FaArrowLeft
 } from 'react-icons/fa';
-import styles from './CardDetails.module.css';
+import styles from './cardDetails.module.css';
 
 function CardDetails() {
     // ข้อมูลการ์ดที่ต้องการแสดงโดยตรง (แบบ static)
