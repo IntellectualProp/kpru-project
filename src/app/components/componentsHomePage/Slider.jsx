@@ -13,7 +13,7 @@ function Slider() {
       try {
         const response = await fetch(config.backend_prod_url + '/slider_image', {
           method: "GET",
-          credentials: "include", // ✅ Important for session-based auth or CSRF cookies
+          credentials: "include",
         });
 
         if (!response.ok) {
@@ -21,7 +21,7 @@ function Slider() {
         }
 
         const data = await response.json();
-        setSlides(data); // ✅ Assuming the API returns an array of slides
+        setSlides(data);
         setLoading(false);
       } catch (err) {
         setError(err.message);

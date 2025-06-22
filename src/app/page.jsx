@@ -43,18 +43,18 @@ export default function Home() {
 
   useEffect(() => {
     const loadingTimers = [
-      { component: 'slider', time: 100 },
-      { component: 'mainMenu', time: 100 },
-      { component: 'chart', time: 100 },
-      { component: 'activity', time: 100 },
+      { component: "slider", time: 100 },
+      { component: "mainMenu", time: 100 },
+      { component: "chart", time: 100 },
+      { component: "activity", time: 100 },
     ];
 
     const timers = [];
     loadingTimers.forEach(({ component, time }) => {
       const timer = setTimeout(() => {
-        setComponentsLoaded(prev => ({
+        setComponentsLoaded((prev) => ({
           ...prev,
-          [component]: true
+          [component]: true,
         }));
       }, time);
       timers.push(timer);
@@ -63,47 +63,66 @@ export default function Home() {
     const mainTimer = setTimeout(() => {
       setIsLoading(false);
     }, 500);
-    
+
     return () => {
-      timers.forEach(timer => clearTimeout(timer));
+      timers.forEach((timer) => clearTimeout(timer));
       clearTimeout(mainTimer);
     };
   }, []);
 
   useEffect(() => {
     if (isLoading) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
-    
+
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [isLoading]);
 
   return (
-    <div className={isLoading ? 'page-loading' : ''}>
+    <div className={isLoading ? "page-loading" : ""}>
       {isLoading && <Loader />}
-      
-      <div className={`content-wrapper ${isLoading ? 'hidden' : 'fade-in'}`}>
-        {componentsLoaded.slider ? <Slider /> : <ContentLoader height="400px" />}
-        {componentsLoaded.mainMenu ? <MainMenu /> : <ContentLoader height="100px" />}
-        {componentsLoaded.chart ? <Chart /> : <ContentLoader height="300px" />}
-        {componentsLoaded.activity ? <Activity /> : <ContentLoader height="250px" />}
 
-        {/*Assessment - ปรับปรุงรูปแบบ*/}
+      <div className={`content-wrapper ${isLoading ? "hidden" : "fade-in"}`}>
+        {componentsLoaded.slider ? (
+          <Slider />
+        ) : (
+          <ContentLoader height="400px" />
+        )}
+        {componentsLoaded.mainMenu ? (
+          <MainMenu />
+        ) : (
+          <ContentLoader height="100px" />
+        )}
+        {componentsLoaded.chart ? <Chart /> : <ContentLoader height="300px" />}
+        {componentsLoaded.activity ? (
+          <Activity />
+        ) : (
+          <ContentLoader height="250px" />
+        )}
+
+        {/* Assessment */}
         <section className="assessment">
           <div className="assessment-section">
             <div className="assessment-image">
               <img src="/images/SAP-Assessment.png" alt="SAP-Assessment" />
             </div>
             <div className="assessment-content">
-              <h2 className="assessment-title">ร่วมประเมินแบบสอบถามความพึงพอใจของผู้ใช้บริการ</h2>
+              <h2 className="assessment-title">
+                ร่วมประเมินแบบสอบถามความพึงพอใจของผู้ใช้บริการ
+              </h2>
               <div className="assessment-button-container">
-                <button className="assessment-button">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSerAxExmrWMh3U3OihY-c1qVx4b-Q20b2teMEBlwhALzbQQRQ/viewform?usp=header"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="assessment-button"
+                >
                   แบบประเมิน
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -114,13 +133,16 @@ export default function Home() {
           <div className="triup-act-section">
             <div className="triup-act-content">
               <div className="triup-act-title">
-                <p>ระบบสารสนเทศรองรับพระราชบัญญัติส่งเสริมการใช้ประโยชน์ผลงานวิจัยและนวัตกรรม</p>
-                <p>Information Systems Supporting the Research and Innovation Utilization Promotion Act</p>
+                <p>
+                  ระบบสารสนเทศรองรับพระราชบัญญัติส่งเสริมการใช้ประโยชน์ผลงานวิจัยและนวัตกรรม
+                </p>
+                <p>
+                  Information Systems Supporting the Research and Innovation
+                  Utilization Promotion Act
+                </p>
               </div>
               <div className="triup-act-button-container">
-                <button className="triup-act-button">
-                  แบบประเมิน
-                </button>
+                <button className="triup-act-button">แบบประเมิน</button>
               </div>
             </div>
             <div className="triup-act-image">
